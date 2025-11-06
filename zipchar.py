@@ -25,8 +25,6 @@ with zipfile.ZipFile(args.file, 'r') as zip:
     else:
         paths = [path for path in zip.namelist() if path.endswith(args.ext)]
 
-    print(zip.namelist())
-
     if not paths:
         print("No matches found!", file=sys.stderr)
         sys.exit(1)
